@@ -18,8 +18,8 @@ Here are some ideas to get you started:
 
 ![header](https://capsule-render.vercel.app/api?type=blur&color=gradient&height=400&section=header&text=hi,%20i'm%20shamathmika&fontSize=40&fontColor=7d6464&animation=fadeIn&desc=a%20creative%20software%20engineer&customColorList=15&fontAlign=50&fontAlignY=50)
 
-<a href="https://www.linkedin.com/in/shamathmika">
+<!-- <a href="https://www.linkedin.com/in/shamathmika">
   <img height="50" src="https://cdn0.iconfinder.com/data/icons/social-hatched-block-set/512/linkedIn-1024.png"/>
-</a>
+</a> -->
 
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=gradient&customColorList=15)
