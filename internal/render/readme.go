@@ -19,16 +19,16 @@ const NoReaction = pet.Action("")
 func imageFor(m pet.Mood, reaction pet.Action) string {
 	switch reaction {
 	case pet.Feed:
-		return "eating.png"
+		return "eating.webp"
 	case pet.Water:
-		return "drinking.png"
+		return "drinking.webp"
 	case pet.Pet:
-		return "petted.png"
+		return "petted.webp"
 	}
 	if m >= pet.Content {
-		return "happy.png"
+		return "happy.webp"
 	}
-	return "waiting.png"
+	return "waiting.webp"
 }
 
 func scene(reaction pet.Action) string {
@@ -90,7 +90,7 @@ func Insert(readme, section string) (string, error) {
 func ActionURL(a pet.Action) string {
 	q := url.Values{}
 	q.Set("title", a.Title())
-	q.Set("body", fmt.Sprintf("Submit this issue. %s gets %s, then replies here and closes it.", pet.PetName, a.Past()))
+	q.Set("body", fmt.Sprintf("Submit this issue. %s gets %s, then replies here and closes it. Refresh the profile after to see the change.", pet.PetName, a.Past()))
 	return "https://github.com/" + pet.Repo + "/issues/new?" + q.Encode()
 }
 

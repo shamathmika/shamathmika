@@ -85,20 +85,20 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 
 <!-- PET:START -->
 <div align="center">
-<img src="assets/drinking.png" alt="Jack, a labrador, drinking from a bowl someone is holding. Looking delighted. Food 100, water 100, affection 100 out of 100." height="300">
+<img src="assets/happy.webp" alt="Jack, a labrador, sitting on the beach. Looking delighted. Food 100, water 100, affection 100 out of 100." height="300">
 <p>
 <code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
 <code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
 <code>affection&nbsp;████████████████████&nbsp;100</code>
 </p>
 <p>
-<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+fed%2C+then+replies+here+and+closes+it.&title=pet%7Cfeed">feed</a>
+<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+fed%2C+then+replies+here+and+closes+it.+Refresh+the+profile+after+to+see+the+change.&title=pet%7Cfeed">feed</a>
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+watered%2C+then+replies+here+and+closes+it.&title=pet%7Cwater">give water</a>
+<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+watered%2C+then+replies+here+and+closes+it.+Refresh+the+profile+after+to+see+the+change.&title=pet%7Cwater">give water</a>
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+petted%2C+then+replies+here+and+closes+it.&title=pet%7Cpet">pet</a>
+<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+petted%2C+then+replies+here+and+closes+it.+Refresh+the+profile+after+to+see+the+change.&title=pet%7Cpet">pet</a>
 </p>
-<p><sub>last watered by <a href="https://github.com/officialpriyasrinivasan">@officialpriyasrinivasan</a>, just now</sub></p>
+<p><sub>last watered by <a href="https://github.com/officialpriyasrinivasan">@officialpriyasrinivasan</a>, 7 minutes ago</sub></p>
 <p><sub>11 visits from 3 people</sub></p>
 </div>
 <!-- PET:END -->
