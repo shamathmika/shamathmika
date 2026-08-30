@@ -25,11 +25,11 @@ func TestRateLimitWindow(t *testing.T) {
 		when time.Time
 		want bool
 	}{
-		{"same minute", "ana", start.Add(time.Minute), true},
-		{"same login in another case", "ANA", start.Add(time.Minute), true},
-		{"someone else", "ben", start.Add(time.Minute), false},
-		{"one second short of an hour", "ana", start.Add(RateLimit - time.Second), true},
-		{"exactly an hour", "ana", start.Add(RateLimit), false},
+		{"straight away", "ana", start.Add(RateLimit / 2), true},
+		{"same login in another case", "ANA", start.Add(RateLimit / 2), true},
+		{"someone else", "ben", start.Add(RateLimit / 2), false},
+		{"a moment short of the limit", "ana", start.Add(RateLimit - time.Second), true},
+		{"exactly at the limit", "ana", start.Add(RateLimit), false},
 		{"the next day", "ana", start.Add(24 * time.Hour), false},
 	}
 	for _, c := range cases {
@@ -50,18 +50,19 @@ func TestHistoryKeepsOneLinePerAction(t *testing.T) {
 	s := New(start)
 
 	for i, user := range []string{"ana", "ben", "ana"} {
-		at := start.Add(time.Duration(i) * 2 * time.Hour)
+		at := start.Add(time.Duration(i) * 2 * RateLimit)
 		s.Apply(Water, user, at)
 		if err := AppendHistory(path, s.Record(Water, user, at)); err != nil {
 			t.Fatal(err)
 		}
 	}
 
-	if recent, _ := RecentlyActed(path, "ben", start.Add(3*time.Hour)); recent {
-		t.Error("ben acted two hours ago and should be clear")
+	when := start.Add(4*RateLimit + RateLimit/2)
+	if recent, _ := RecentlyActed(path, "ben", when); recent {
+		t.Error("ben acted three windows ago and should be clear")
 	}
-	if recent, _ := RecentlyActed(path, "ana", start.Add(4*time.Hour+30*time.Minute)); !recent {
-		t.Error("ana acted 30 minutes ago and should be held")
+	if recent, _ := RecentlyActed(path, "ana", when); !recent {
+		t.Error("ana acted half a window ago and should be held")
 	}
 }
 

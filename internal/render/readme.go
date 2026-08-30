@@ -42,7 +42,6 @@ func Section(s *pet.State, now time.Time) string {
 	fmt.Fprintf(&b, `<a href="%s">pet</a>`+"\n", ActionURL(pet.Pet))
 	b.WriteString(`</p>` + "\n")
 
-	fmt.Fprintf(&b, `<p><sub>the links open a pre-filled issue, submit it and %s replies in about half a minute</sub></p>`+"\n", pet.PetName)
 	fmt.Fprintf(&b, `<p><sub>%s</sub></p>`+"\n", lastLine(s, now))
 	fmt.Fprintf(&b, `<p><sub>%s</sub></p>`+"\n", lifetimeLine(s))
 	b.WriteString(`</div>` + "\n")
@@ -84,7 +83,7 @@ func WriteAssets(s *pet.State, reaction pet.Action, dir string) error {
 func ActionURL(a pet.Action) string {
 	q := url.Values{}
 	q.Set("title", a.Title())
-	q.Set("body", fmt.Sprintf("Submit this issue as it is. %s gets %s, then replies here and closes it in about half a minute. Nothing else to do.", pet.PetName, a.Past()))
+	q.Set("body", fmt.Sprintf("Submit this issue. %s gets %s, then replies here and closes it.", pet.PetName, a.Past()))
 	return "https://github.com/" + pet.Repo + "/issues/new?" + q.Encode()
 }
 

@@ -27,4 +27,4 @@ const (
 	Boost     = 35.0
 )
 
-const RateLimit = time.Hour
+const RateLimit = 30 * time.Second
