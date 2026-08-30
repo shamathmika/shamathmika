@@ -3,12 +3,12 @@
 <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.svg">
 <img src="assets/title-light.svg" alt="hi, i'm shamathmika">
 </picture>
+  <br><br>
 </div>
 
 <p align="justify">
 A <strong>Software Engineer</strong> with 5+ years of experience and a <strong>Graduate Student</strong> at SJSU, graduating December 2026. <br><br>
-Currently working on a distributed datacenter networking software as a Software Development Engineering Intern at <strong>Nokia</strong>. <br>
-Before my masters I was working as a Software Engineer at <strong>Gen Digital</strong> (formerly Norton Lifelock / Symantec) building consumer security products for Windows.
+Currently working on a distributed datacenter networking software as a Software Development Engineering Intern at <strong>Nokia</strong>. Before my masters I was working as a Software Engineer at <strong>Gen Digital</strong> (formerly Norton Lifelock / Symantec) building consumer security products for Windows.
 </p>
 
 <p align="justify">
@@ -19,13 +19,13 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 I have previously worked with: C++, Go, Java, Python, React, TypeScript, Javascript, Node, SQL, MongoDB, AWS
 </p>
 
-<p align="justify">
+<p align="center">
 <a href="https://www.linkedin.com/in/shamathmika">LinkedIn</a> &middot; <a href="https://shamathmika.vercel.app/">Portfolio</a>
 </p>
 
 <hr>
 
-<p align="justify">Show Jack some love while you are here</p>
+<p align="center">Show Jack some love while you are here</p>
 
 <!-- PET:START -->
 <div align="center">
