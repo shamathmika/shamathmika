@@ -29,7 +29,7 @@ I have previously worked with: C++, Go, Java, Python, React, TypeScript, Javascr
 
 <!-- PET:START -->
 <div align="center">
-<img src="assets/happy.png" alt="Jack, a labrador, sitting on the beach. Looking delighted. Food 98, water 98, affection 100 out of 100." height="230">
+<img src="assets/happy.png" alt="Jack, a labrador, sitting on the beach. Looking delighted. Food 98, water 98, affection 100 out of 100." height="300">
 <p>
 <code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;&nbsp;98</code><br>
 <code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;&nbsp;98</code><br>
@@ -42,7 +42,7 @@ I have previously worked with: C++, Go, Java, Python, React, TypeScript, Javascr
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+petted%2C+then+replies+here+and+closes+it.&title=pet%7Cpet">pet</a>
 </p>
-<p><sub>last petted by <a href="https://github.com/shamathmika">@shamathmika</a>, 8 minutes ago</sub></p>
+<p><sub>last petted by <a href="https://github.com/shamathmika">@shamathmika</a>, 13 minutes ago</sub></p>
 <p><sub>4 visits from 1 person</sub></p>
 </div>
 <!-- PET:END -->

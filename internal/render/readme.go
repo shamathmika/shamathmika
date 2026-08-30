@@ -94,7 +94,7 @@ func ActionURL(a pet.Action) string {
 	return "https://github.com/" + pet.Repo + "/issues/new?" + q.Encode()
 }
 
-const drawHeight = 230
+const drawHeight = 300
 
 func altText(s *pet.State, reaction pet.Action) string {
 	return fmt.Sprintf("%s, a labrador, %s. Looking %s. Food %d, water %d, affection %d out of 100.",
