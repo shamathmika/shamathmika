@@ -31,7 +31,7 @@ func imageFor(m pet.Mood, reaction pet.Action) string {
 	return "waiting.webp"
 }
 
-func scene(reaction pet.Action) string {
+func scene(m pet.Mood, reaction pet.Action) string {
 	switch reaction {
 	case pet.Feed:
 		return "taking a treat from a hand"
@@ -40,31 +40,35 @@ func scene(reaction pet.Action) string {
 	case pet.Pet:
 		return "being scratched on the head"
 	}
-	return "sitting on the beach"
+	if m >= pet.Content {
+		return "sitting up, tail wagging"
+	}
+	return "sitting quietly, tail resting"
 }
 
 func Section(s *pet.State, reaction pet.Action, now time.Time) string {
 	var b strings.Builder
 	b.WriteString(`<div align="center">` + "\n")
+
+	fmt.Fprintf(&b, `<p>Say hello to <strong>%s</strong> while you are here!</p>`+"\n", pet.PetName)
+
 	fmt.Fprintf(&b, `<img src="%s" alt="%s" height="%d">`+"\n",
 		path.Join(pet.AssetsDir, imageFor(s.Mood(), reaction)), altText(s, reaction), drawHeight)
 
+	b.WriteString(`<p>` + "\n" + `Interact with her by giving her: <br>` + "\n")
+	fmt.Fprintf(&b, `a <a href="%s">treat</a>`+"\n<br>\n", ActionURL(pet.Feed))
+	fmt.Fprintf(&b, `some <a href="%s">water</a>`+"\n<br>\n", ActionURL(pet.Water))
+	fmt.Fprintf(&b, `lots of <a href="%s">pets</a>`+"\n", ActionURL(pet.Pet))
+	b.WriteString(`</p>` + "\n")
+
+	b.WriteString(`<p><strong>How she is doing</strong></p>` + "\n")
 	b.WriteString(`<p>` + "\n")
 	fmt.Fprintf(&b, `<code>%s</code><br>`+"\n", statLine("food", s.Food))
 	fmt.Fprintf(&b, `<code>%s</code><br>`+"\n", statLine("water", s.Water))
 	fmt.Fprintf(&b, `<code>%s</code>`+"\n", statLine("affection", s.Affection))
 	b.WriteString(`</p>` + "\n")
 
-	b.WriteString(`<p>` + "\n")
-	fmt.Fprintf(&b, `<a href="%s">feed</a>`+"\n", ActionURL(pet.Feed))
-	b.WriteString(`&nbsp;&nbsp;&middot;&nbsp;&nbsp;` + "\n")
-	fmt.Fprintf(&b, `<a href="%s">give water</a>`+"\n", ActionURL(pet.Water))
-	b.WriteString(`&nbsp;&nbsp;&middot;&nbsp;&nbsp;` + "\n")
-	fmt.Fprintf(&b, `<a href="%s">pet</a>`+"\n", ActionURL(pet.Pet))
-	b.WriteString(`</p>` + "\n")
-
-	fmt.Fprintf(&b, `<p><sub>%s</sub></p>`+"\n", lastLine(s, now))
-	fmt.Fprintf(&b, `<p><sub>%s</sub></p>`+"\n", lifetimeLine(s))
+	fmt.Fprintf(&b, `<p><sub>%s<br>%s</sub></p>`+"\n", lastLine(s, now), lifetimeLine(s))
 	b.WriteString(`</div>` + "\n")
 	return b.String()
 }
@@ -90,15 +94,19 @@ func Insert(readme, section string) (string, error) {
 func ActionURL(a pet.Action) string {
 	q := url.Values{}
 	q.Set("title", a.Title())
-	q.Set("body", fmt.Sprintf("Submit this issue. %s gets %s, then replies here and closes it. Refresh the profile after to see the change.", pet.PetName, a.Past()))
+	owner, _, _ := strings.Cut(pet.Repo, "/")
+	q.Set("body", fmt.Sprintf(
+		"Submit this issue and %s gets %s. She replies here and closes it herself. "+
+			"Then head back to [the profile](https://github.com/%s) and refresh to see her reaction.",
+		pet.PetName, a.Gift(), owner))
 	return "https://github.com/" + pet.Repo + "/issues/new?" + q.Encode()
 }
 
-const drawHeight = 300
+const drawHeight = 350
 
 func altText(s *pet.State, reaction pet.Action) string {
-	return fmt.Sprintf("%s, a labrador, %s. Looking %s. Food %d, water %d, affection %d out of 100.",
-		pet.PetName, scene(reaction), s.Mood(), whole(s.Food), whole(s.Water), whole(s.Affection))
+	return fmt.Sprintf("%s, a golden retriever, %s. Looking %s. Food %d, water %d, affection %d out of 100.",
+		pet.PetName, scene(s.Mood(), reaction), s.Mood(), whole(s.Food), whole(s.Water), whole(s.Affection))
 }
 
 func statLine(label string, v float64) string {
@@ -119,8 +127,8 @@ func lastLine(s *pet.State, now time.Time) string {
 	}
 	e := s.LastAction
 	user := html.EscapeString(e.User)
-	return fmt.Sprintf(`last %s by <a href="https://github.com/%s">@%s</a>, %s`,
-		e.Action.Past(), user, user, ago(now.Sub(e.At)))
+	return fmt.Sprintf(`<a href="https://github.com/%s">@%s</a> gave her %s, %s`,
+		user, user, e.Action.Gift(), ago(now.Sub(e.At)))
 }
 
 func lifetimeLine(s *pet.State) string {

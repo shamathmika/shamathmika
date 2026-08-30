@@ -48,4 +48,15 @@ func (a Action) Past() string {
 	}
 }
 
+func (a Action) Gift() string {
+	switch a {
+	case Water:
+		return "some water"
+	case Pet:
+		return "lots of pets"
+	default:
+		return "a treat"
+	}
+}
+
 func (a Action) Title() string { return TitlePrefix + string(a) }
