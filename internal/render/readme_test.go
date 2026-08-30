@@ -125,7 +125,7 @@ func TestSectionCarriesTheWholePetBlock(t *testing.T) {
 	got := Section(s, NoReaction, now)
 
 	for _, want := range []string{
-		"assets/happy.jpg",
+		"assets/happy.png",
 		"title=pet%7Cfeed",
 		"title=pet%7Cwater",
 		"title=pet%7Cpet",
@@ -146,14 +146,14 @@ func TestImageForEveryState(t *testing.T) {
 		reaction pet.Action
 		want     string
 	}{
-		{pet.Content, pet.Feed, "eating.jpg"},
-		{pet.Wilting, pet.Water, "drinking.jpg"},
-		{pet.Fine, pet.Pet, "petted.jpg"},
-		{pet.Delighted, NoReaction, "happy.jpg"},
-		{pet.Content, NoReaction, "happy.jpg"},
-		{pet.Fine, NoReaction, "waiting.jpg"},
-		{pet.Droopy, NoReaction, "waiting.jpg"},
-		{pet.Wilting, NoReaction, "waiting.jpg"},
+		{pet.Content, pet.Feed, "eating.png"},
+		{pet.Wilting, pet.Water, "drinking.png"},
+		{pet.Fine, pet.Pet, "petted.png"},
+		{pet.Delighted, NoReaction, "happy.png"},
+		{pet.Content, NoReaction, "happy.png"},
+		{pet.Fine, NoReaction, "waiting.png"},
+		{pet.Droopy, NoReaction, "waiting.png"},
+		{pet.Wilting, NoReaction, "waiting.png"},
 	}
 	for _, c := range cases {
 		if got := imageFor(c.mood, c.reaction); got != c.want {

@@ -19,16 +19,16 @@ const NoReaction = pet.Action("")
 func imageFor(m pet.Mood, reaction pet.Action) string {
 	switch reaction {
 	case pet.Feed:
-		return "eating.jpg"
+		return "eating.png"
 	case pet.Water:
-		return "drinking.jpg"
+		return "drinking.png"
 	case pet.Pet:
-		return "petted.jpg"
+		return "petted.png"
 	}
 	if m >= pet.Content {
-		return "happy.jpg"
+		return "happy.png"
 	}
-	return "waiting.jpg"
+	return "waiting.png"
 }
 
 func scene(reaction pet.Action) string {
