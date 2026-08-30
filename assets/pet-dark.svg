@@ -1,32 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 0 212 200" width="212" height="200" role="img" aria-label="Jack looks content">
-  <title>Jack looks content</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 0 212 200" width="212" height="200" role="img" aria-label="Jack looks delighted">
+  <title>Jack looks delighted</title>
   <style>
     .idle{animation:breathe 4.5s ease-in-out infinite;transform-origin:90px 176px}
     @keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.025,0.98)}}
-    .react{animation:hop 1.1s ease-out 0.5s both;transform-origin:90px 176px}
-    @keyframes hop{0%{transform:translateY(0)}30%{transform:translateY(-12px)}55%{transform:translateY(0)}75%{transform:translateY(-5px)}100%{transform:translateY(0)}}
-    .prop{animation:drop 1.2s ease-in both}
-    @keyframes drop{0%{opacity:0;transform:translateY(-96px)}15%{opacity:1}70%{opacity:1;transform:translateY(0)}88%{opacity:0}100%{opacity:0}}
+    .react{animation:nuzzle 1.4s ease-in-out both;transform-origin:90px 176px}
+    @keyframes nuzzle{0%,100%{transform:rotate(0deg)}20%{transform:rotate(-3.5deg)}55%{transform:rotate(3.5deg)}80%{transform:rotate(-1.5deg)}}
+    .prop{animation:rise 1.8s ease-out both}
+    .prop2{animation:rise 1.8s ease-out 0.35s both}
+    @keyframes rise{0%{opacity:0;transform:translateY(8px) scale(0.5)}20%{opacity:0.95}100%{opacity:0;transform:translateY(-46px) scale(1)}}
     @media (prefers-reduced-motion:reduce){.idle,.react,.prop,.prop2{animation:none}.prop,.prop2{opacity:0}}
   </style>
   <g fill="none" stroke="#f4ecdd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
     <g class="react"><g class="idle">
-      <g transform="translate(48,64) rotate(-4)"><path d="M 0 6 C -16 -12 -14 -38 2 -48 C 17 -39 14 -12 9 4 Z" fill="#8d7546"/><path d="M 1 -4 C -8 -17 -7 -31 2 -39 C 10 -31 8 -17 5 -4 Z" fill="#6f5a35" stroke="none"/></g>
-      <g transform="translate(132,64) scale(-1,1) rotate(-4)"><path d="M 0 6 C -16 -12 -14 -38 2 -48 C 17 -39 14 -12 9 4 Z" fill="#8d7546"/><path d="M 1 -4 C -8 -17 -7 -31 2 -39 C 10 -31 8 -17 5 -4 Z" fill="#6f5a35" stroke="none"/></g>
+      <g transform="translate(48,64) rotate(8)"><path d="M 0 6 C -16 -12 -14 -38 2 -48 C 17 -39 14 -12 9 4 Z" fill="#8d7546"/><path d="M 1 -4 C -8 -17 -7 -31 2 -39 C 10 -31 8 -17 5 -4 Z" fill="#6f5a35" stroke="none"/></g>
+      <g transform="translate(132,64) scale(-1,1) rotate(8)"><path d="M 0 6 C -16 -12 -14 -38 2 -48 C 17 -39 14 -12 9 4 Z" fill="#8d7546"/><path d="M 1 -4 C -8 -17 -7 -31 2 -39 C 10 -31 8 -17 5 -4 Z" fill="#6f5a35" stroke="none"/></g>
       <ellipse cx="64" cy="178" rx="16" ry="9" fill="#8d7546"/>
       <ellipse cx="116" cy="178" rx="16" ry="9" fill="#8d7546"/>
       <path d="M 90 38 C 132 38 152 70 150 112 C 148 154 124 176 90 176 C 56 176 32 154 30 112 C 28 70 48 38 90 38 Z" fill="#8d7546"/>
       <ellipse cx="90" cy="130" rx="40" ry="32" fill="#ab9160" stroke="none"/>
       <g transform="translate(0,0)" stroke="#2b2419">
-        <circle cx="66" cy="99" r="8" fill="#2b2419" stroke="none"/>
-        <circle cx="68.72" cy="96.12" r="2.6" fill="#fff8ec" stroke="none"/>
-        <circle cx="114" cy="99" r="8" fill="#2b2419" stroke="none"/>
-        <circle cx="116.72" cy="96.12" r="2.6" fill="#fff8ec" stroke="none"/>
-        <path d="M 78 126 Q 90 138 102 126"/>
-        <ellipse cx="48" cy="122" rx="9" ry="5.5" fill="#d98b7c" stroke="none" opacity="0.45"/>
-        <ellipse cx="132" cy="122" rx="9" ry="5.5" fill="#d98b7c" stroke="none" opacity="0.45"/>
+        <circle cx="66" cy="99" r="9" fill="#2b2419" stroke="none"/>
+        <circle cx="69.06" cy="95.76" r="3.2" fill="#fff8ec" stroke="none"/>
+        <circle cx="114" cy="99" r="9" fill="#2b2419" stroke="none"/>
+        <circle cx="117.06" cy="95.76" r="3.2" fill="#fff8ec" stroke="none"/>
+        <path d="M 76 122 Q 90 143 104 122 Z" fill="#2b2419"/>
+        <ellipse cx="48" cy="122" rx="9" ry="5.5" fill="#d98b7c" stroke="none" opacity="0.6"/>
+        <ellipse cx="132" cy="122" rx="9" ry="5.5" fill="#d98b7c" stroke="none" opacity="0.6"/>
+        <path d="M 22 68 C 23.44 73.6 24.4 74.56 30 76 C 24.4 77.44 23.44 78.4 22 84 C 20.56 78.4 19.6 77.44 14 76 C 19.6 74.56 20.56 73.6 22 68 Z" fill="#f2c14e" stroke="none"/>
+        <path d="M 158 59 C 159.26 63.9 160.1 64.74 165 66 C 160.1 67.26 159.26 68.1 158 73 C 156.74 68.1 155.9 67.26 151 66 C 155.9 64.74 156.74 63.9 158 59 Z" fill="#f2c14e" stroke="none"/>
+        <path d="M 26 39 C 26.9 42.5 27.5 43.1 31 44 C 27.5 44.9 26.9 45.5 26 49 C 25.1 45.5 24.5 44.9 21 44 C 24.5 43.1 25.1 42.5 26 39 Z" fill="#f2c14e" stroke="none"/>
       </g>
     </g></g>
-    <g class="prop"><path d="M 90 108 C 84 116 83 122 86.5 124.5 C 90 127 95 123 93 118 Z" fill="#8fc0e0" stroke="none"/></g>
+    <g class="prop"><path d="M 142 113.4 C 132.1 106.2 137.05 98.1 142 104.85 C 146.95 98.1 151.9 106.2 142 113.4 Z" fill="#d98b7c" stroke="none"/></g>
+    <g class="prop2"><path d="M 42 104.2 C 34.3 98.6 38.15 92.3 42 97.55 C 45.85 92.3 49.7 98.6 42 104.2 Z" fill="#d98b7c" stroke="none"/></g>
   </g>
 </svg>
