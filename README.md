@@ -6,7 +6,7 @@
 </div>
 
 <p align="justify">
-A <strong>Software Engineer</strong> with 5+ years of experience and a <strong>Graduate Student</strong> at SJSU, graduating December 2026. <br>
+A <strong>Software Engineer</strong> with 5+ years of experience and a <strong>Graduate Student</strong> at SJSU, graduating December 2026. <br><br>
 Currently working on a distributed datacenter networking software as a Software Development Engineering Intern at <strong>Nokia</strong>. <br>
 Before my masters I was working as a Software Engineer at <strong>Gen Digital</strong> (formerly Norton Lifelock / Symantec) building consumer security products for Windows.
 </p>
