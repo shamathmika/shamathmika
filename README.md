@@ -30,12 +30,12 @@ Contact me: <a href="https://www.linkedin.com/in/shamathmika">LinkedIn</a> &midd
 <!-- PET:START -->
 <div align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="assets/pet-dark.svg?v=1788062224">
-<img src="assets/pet-light.svg?v=1788062224" alt="Jack looks content. Food 100, water 79, affection 79 out of 100." height="200">
+<source media="(prefers-color-scheme: dark)" srcset="assets/pet-dark.svg?v=1788062358">
+<img src="assets/pet-light.svg?v=1788062358" alt="Jack looks content. Food 100, water 100, affection 79 out of 100." height="200">
 </picture>
 <p>
 <code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
-<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████░░░░&nbsp;&nbsp;79</code><br>
+<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
 <code>affection&nbsp;████████████████░░░░&nbsp;&nbsp;79</code>
 </p>
 <p>
@@ -45,7 +45,7 @@ Contact me: <a href="https://www.linkedin.com/in/shamathmika">LinkedIn</a> &midd
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+petted%2C+then+replies+here+and+closes+it.&title=pet%7Cpet">pet</a>
 </p>
-<p><sub>last fed by <a href="https://github.com/shamathmika">@shamathmika</a>, 34 minutes ago</sub></p>
-<p><sub>1 visit from 1 person</sub></p>
+<p><sub>last watered by <a href="https://github.com/shamathmika">@shamathmika</a>, just now</sub></p>
+<p><sub>2 visits from 1 person</sub></p>
 </div>
 <!-- PET:END -->

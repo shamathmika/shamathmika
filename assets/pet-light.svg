@@ -3,6 +3,10 @@
   <style>
     .idle{animation:breathe 4.5s ease-in-out infinite;transform-origin:90px 176px}
     @keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.025,0.98)}}
+    .react{animation:hop 1.1s ease-out 0.5s both;transform-origin:90px 176px}
+    @keyframes hop{0%{transform:translateY(0)}30%{transform:translateY(-12px)}55%{transform:translateY(0)}75%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+    .prop{animation:drop 1.2s ease-in both}
+    @keyframes drop{0%{opacity:0;transform:translateY(-96px)}15%{opacity:1}70%{opacity:1;transform:translateY(0)}88%{opacity:0}100%{opacity:0}}
     @media (prefers-reduced-motion:reduce){.idle,.react,.prop,.prop2{animation:none}.prop,.prop2{opacity:0}}
   </style>
   <g fill="none" stroke="#3a322a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
@@ -23,5 +27,6 @@
         <ellipse cx="132" cy="122" rx="9" ry="5.5" fill="#e59283" stroke="none" opacity="0.45"/>
       </g>
     </g></g>
+    <g class="prop"><path d="M 90 108 C 84 116 83 122 86.5 124.5 C 90 127 95 123 93 118 Z" fill="#6f9fc4" stroke="none"/></g>
   </g>
 </svg>
