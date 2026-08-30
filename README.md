@@ -18,11 +18,11 @@ Meet Jack while you are here
 <!-- PET:START -->
 <div align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="assets/pet-dark.svg?v=1788059692">
-<img src="assets/pet-light.svg?v=1788059692" alt="Jack looks content. Food 79, water 79, affection 79 out of 100." height="200">
+<source media="(prefers-color-scheme: dark)" srcset="assets/pet-dark.svg?v=1788060130">
+<img src="assets/pet-light.svg?v=1788060130" alt="Jack looks content. Food 100, water 79, affection 79 out of 100." height="200">
 </picture>
 <p>
-<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████░░░░&nbsp;&nbsp;79</code><br>
+<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
 <code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████░░░░&nbsp;&nbsp;79</code><br>
 <code>affection&nbsp;████████████████░░░░&nbsp;&nbsp;79</code>
 </p>
@@ -33,7 +33,7 @@ Meet Jack while you are here
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Open+this+issue+as+it+is+and+Jack+gets+petted.+It+closes+itself.&title=pet%7Cpet">pet</a>
 </p>
-<p><sub>nobody has come by yet</sub></p>
-<p><sub>no visits yet</sub></p>
+<p><sub>last fed by <a href="https://github.com/shamathmika">@shamathmika</a>, just now</sub></p>
+<p><sub>1 visit from 1 person</sub></p>
 </div>
 <!-- PET:END -->
