@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 0 212 200" width="212" height="200" role="img" aria-label="Jack looks content">
+  <title>Jack looks content</title>
+  <style>
+    .idle{animation:breathe 4.5s ease-in-out infinite;transform-origin:90px 176px}
+    @keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.025,0.98)}}
+    @media (prefers-reduced-motion:reduce){.idle,.react,.prop,.prop2{animation:none}.prop,.prop2{opacity:0}}
+  </style>
+  <g fill="none" stroke="#3a322a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <g class="react"><g class="idle">
+      <g transform="translate(48,64) rotate(-4)"><path d="M 0 6 C -16 -12 -14 -38 2 -48 C 17 -39 14 -12 9 4 Z" fill="#f2cd88"/><path d="M 1 -4 C -8 -17 -7 -31 2 -39 C 10 -31 8 -17 5 -4 Z" fill="#e3b96f" stroke="none"/></g>
+      <g transform="translate(132,64) scale(-1,1) rotate(-4)"><path d="M 0 6 C -16 -12 -14 -38 2 -48 C 17 -39 14 -12 9 4 Z" fill="#f2cd88"/><path d="M 1 -4 C -8 -17 -7 -31 2 -39 C 10 -31 8 -17 5 -4 Z" fill="#e3b96f" stroke="none"/></g>
+      <ellipse cx="64" cy="178" rx="16" ry="9" fill="#f2cd88"/>
+      <ellipse cx="116" cy="178" rx="16" ry="9" fill="#f2cd88"/>
+      <path d="M 90 38 C 132 38 152 70 150 112 C 148 154 124 176 90 176 C 56 176 32 154 30 112 C 28 70 48 38 90 38 Z" fill="#f2cd88"/>
+      <ellipse cx="90" cy="130" rx="40" ry="32" fill="#fbe6bd" stroke="none"/>
+      <g transform="translate(0,0)" stroke="#3a322a">
+        <circle cx="66" cy="99" r="8" fill="#3a322a" stroke="none"/>
+        <circle cx="68.72" cy="96.12" r="2.6" fill="#ffffff" stroke="none"/>
+        <circle cx="114" cy="99" r="8" fill="#3a322a" stroke="none"/>
+        <circle cx="116.72" cy="96.12" r="2.6" fill="#ffffff" stroke="none"/>
+        <path d="M 78 126 Q 90 138 102 126"/>
+        <ellipse cx="48" cy="122" rx="9" ry="5.5" fill="#e59283" stroke="none" opacity="0.45"/>
+        <ellipse cx="132" cy="122" rx="9" ry="5.5" fill="#e59283" stroke="none" opacity="0.45"/>
+      </g>
+    </g></g>
+  </g>
+</svg>
