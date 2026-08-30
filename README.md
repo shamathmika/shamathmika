@@ -85,10 +85,10 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 
 <!-- PET:START -->
 <div align="center">
-<img src="assets/happy.png" alt="Jack, a labrador, sitting on the beach. Looking delighted. Food 100, water 100, affection 100 out of 100." height="300">
+<img src="assets/petted.png" alt="Jack, a labrador, being scratched on the head. Looking delighted. Food 99, water 99, affection 100 out of 100." height="300">
 <p>
-<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
-<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
+<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;&nbsp;99</code><br>
+<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;&nbsp;99</code><br>
 <code>affection&nbsp;████████████████████&nbsp;100</code>
 </p>
 <p>
@@ -98,7 +98,7 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+petted%2C+then+replies+here+and+closes+it.&title=pet%7Cpet">pet</a>
 </p>
-<p><sub>last petted by <a href="https://github.com/aakashbharadwaj15">@aakashbharadwaj15</a>, 5 minutes ago</sub></p>
-<p><sub>8 visits from 2 people</sub></p>
+<p><sub>last petted by <a href="https://github.com/officialpriyasrinivasan">@officialpriyasrinivasan</a>, just now</sub></p>
+<p><sub>9 visits from 3 people</sub></p>
 </div>
 <!-- PET:END -->
