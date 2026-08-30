@@ -129,6 +129,7 @@ func TestSectionCarriesTheWholePetBlock(t *testing.T) {
 		"title=pet%7Cfeed",
 		"title=pet%7Cwater",
 		"title=pet%7Cpet",
+		"about half a minute",
 		"last watered by",
 		`https://github.com/ana`,
 		"3 hours ago",
