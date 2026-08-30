@@ -4,15 +4,12 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"path/filepath"
 	"strings"
 	"time"
 
 	"github.com/shamathmika/shamathmika/internal/pet"
 	"github.com/shamathmika/shamathmika/internal/render"
 )
-
-var moods = []pet.Mood{pet.Delighted, pet.Content, pet.Fine, pet.Droopy, pet.Wilting}
 
 func main() {
 	cmd := ""
@@ -26,10 +23,8 @@ func main() {
 		err = renderNow()
 	case "act":
 		err = act(os.Args[2:])
-	case "preview":
-		err = preview("preview")
 	default:
-		fmt.Fprintln(os.Stderr, "usage: pet render | pet act --user NAME --title TITLE | pet preview")
+		fmt.Fprintln(os.Stderr, "usage: pet render | pet act --user NAME --title TITLE")
 		os.Exit(2)
 	}
 	if err != nil {
@@ -99,11 +94,20 @@ func act(args []string) error {
 	return report(fmt.Sprintf("pet: %s by @%s", a.Past(), *user), render.Reply(s, a, full))
 }
 
+func write(s *pet.State, reaction pet.Action, now time.Time) error {
+	b, err := os.ReadFile(pet.ReadmePath)
+	if err != nil {
+		return err
+	}
+	out, err := render.Insert(string(b), render.Section(s, reaction, now))
+	if err != nil {
+		return err
+	}
+	return os.WriteFile(pet.ReadmePath, []byte(out), 0o644)
+}
+
 func report(commit, reply string) error {
-	for _, kv := range [][2]string{
-		{"commit", commit},
-		{"reply", reply},
-	} {
+	for _, kv := range [][2]string{{"commit", commit}, {"reply", reply}} {
 		if err := output(kv[0], kv[1]); err != nil {
 			return err
 		}
@@ -125,71 +129,4 @@ func output(key, value string) error {
 	defer f.Close()
 	_, err = fmt.Fprintln(f, line)
 	return err
-}
-
-func write(s *pet.State, reaction pet.Action, now time.Time) error {
-	if err := render.WriteAssets(s, reaction, pet.AssetsDir); err != nil {
-		return err
-	}
-	b, err := os.ReadFile(pet.ReadmePath)
-	if err != nil {
-		return err
-	}
-	out, err := render.Insert(string(b), render.Section(s, now))
-	if err != nil {
-		return err
-	}
-	return os.WriteFile(pet.ReadmePath, []byte(out), 0o644)
-}
-
-func preview(dir string) error {
-	if err := os.MkdirAll(dir, 0o755); err != nil {
-		return err
-	}
-	art, err := render.LoadArt(pet.ArtPath)
-	if err != nil {
-		return err
-	}
-	for _, m := range moods {
-		for _, t := range []render.Theme{render.Light, render.Dark} {
-			name := fmt.Sprintf("%s-%s.svg", m, t)
-			if err := os.WriteFile(filepath.Join(dir, name), []byte(render.Pet(art, m, t, render.NoReaction)), 0o644); err != nil {
-				return err
-			}
-		}
-	}
-	for _, a := range []pet.Action{pet.Feed, pet.Water, pet.Pet} {
-		name := fmt.Sprintf("reaction-%s.svg", a)
-		if err := os.WriteFile(filepath.Join(dir, name), []byte(render.Pet(art, pet.Content, render.Light, a)), 0o644); err != nil {
-			return err
-		}
-	}
-	if err := os.WriteFile(filepath.Join(dir, "faces.html"), []byte(contactSheet(art)), 0o644); err != nil {
-		return err
-	}
-	fmt.Printf("wrote %s\n", filepath.Join(dir, "faces.html"))
-	return nil
-}
-
-func contactSheet(art string) string {
-	var b strings.Builder
-	b.WriteString(`<!doctype html><meta charset="utf-8"><title>pet faces</title>`)
-	b.WriteString(`<style>body{font:14px -apple-system,system-ui,sans-serif;margin:0}` +
-		`section{padding:28px}.light{background:#ffffff;color:#24292f}.dark{background:#0d1117;color:#c9d1d9}` +
-		`.row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end}` +
-		`figure{margin:0;text-align:center}figcaption{margin-top:8px;opacity:.75}` +
-		`button{margin-left:12px;font:inherit}</style>`)
-	for _, t := range []render.Theme{render.Light, render.Dark} {
-		fmt.Fprintf(&b, `<section class="%s"><h2>%s mode</h2><div class="row">`, t, t)
-		for _, m := range moods {
-			fmt.Fprintf(&b, `<figure>%s<figcaption>%s</figcaption></figure>`, render.Pet(art, m, t, render.NoReaction), m)
-		}
-		b.WriteString(`</div></section>`)
-	}
-	b.WriteString(`<section class="light"><h2>reactions<button onclick="location.reload()">replay</button></h2><div class="row">`)
-	for _, a := range []pet.Action{pet.Feed, pet.Water, pet.Pet} {
-		fmt.Fprintf(&b, `<figure>%s<figcaption>%s</figcaption></figure>`, render.Pet(art, pet.Content, render.Light, a), a)
-	}
-	b.WriteString(`</div></section>`)
-	return b.String()
 }

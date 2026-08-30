@@ -1,14 +1,11 @@
 package render
 
 import (
-	"bytes"
 	"fmt"
 	"html"
 	"math"
 	"net/url"
-	"os"
 	"path"
-	"path/filepath"
 	"strings"
 	"time"
 
@@ -17,17 +14,40 @@ import (
 
 const barWidth = 20
 
-func Section(s *pet.State, now time.Time) string {
-	v := s.LastDecayAt.Unix()
-	light := fmt.Sprintf("%s?v=%d", path.Join(pet.AssetsDir, pet.LightSVG), v)
-	dark := fmt.Sprintf("%s?v=%d", path.Join(pet.AssetsDir, pet.DarkSVG), v)
+const NoReaction = pet.Action("")
 
+func imageFor(m pet.Mood, reaction pet.Action) string {
+	switch reaction {
+	case pet.Feed:
+		return "eating.jpg"
+	case pet.Water:
+		return "drinking.jpg"
+	case pet.Pet:
+		return "petted.jpg"
+	}
+	if m >= pet.Content {
+		return "happy.jpg"
+	}
+	return "waiting.jpg"
+}
+
+func scene(reaction pet.Action) string {
+	switch reaction {
+	case pet.Feed:
+		return "taking a treat from a hand"
+	case pet.Water:
+		return "drinking from a bowl someone is holding"
+	case pet.Pet:
+		return "being scratched on the head"
+	}
+	return "sitting on the beach"
+}
+
+func Section(s *pet.State, reaction pet.Action, now time.Time) string {
 	var b strings.Builder
 	b.WriteString(`<div align="center">` + "\n")
-	b.WriteString(`<picture>` + "\n")
-	fmt.Fprintf(&b, `<source media="(prefers-color-scheme: dark)" srcset="%s">`+"\n", dark)
-	fmt.Fprintf(&b, `<img src="%s" alt="%s" height="%d">`+"\n", light, altText(s), drawHeight)
-	b.WriteString(`</picture>` + "\n")
+	fmt.Fprintf(&b, `<img src="%s" alt="%s" height="%d">`+"\n",
+		path.Join(pet.AssetsDir, imageFor(s.Mood(), reaction)), altText(s, reaction), drawHeight)
 
 	b.WriteString(`<p>` + "\n")
 	fmt.Fprintf(&b, `<code>%s</code><br>`+"\n", statLine("food", s.Food))
@@ -67,29 +87,6 @@ func Insert(readme, section string) (string, error) {
 	}
 }
 
-func WriteAssets(s *pet.State, reaction pet.Action, dir string) error {
-	if err := os.MkdirAll(dir, 0o755); err != nil {
-		return err
-	}
-	art, err := LoadArt(pet.ArtPath)
-	if err != nil {
-		return err
-	}
-	m := s.Mood()
-	files := map[string]Theme{pet.LightSVG: Light, pet.DarkSVG: Dark}
-	for name, theme := range files {
-		path := filepath.Join(dir, name)
-		next := []byte(Pet(art, m, theme, reaction))
-		if old, err := os.ReadFile(path); err == nil && bytes.Equal(old, next) {
-			continue
-		}
-		if err := os.WriteFile(path, next, 0o644); err != nil {
-			return err
-		}
-	}
-	return nil
-}
-
 func ActionURL(a pet.Action) string {
 	q := url.Values{}
 	q.Set("title", a.Title())
@@ -97,9 +94,11 @@ func ActionURL(a pet.Action) string {
 	return "https://github.com/" + pet.Repo + "/issues/new?" + q.Encode()
 }
 
-func altText(s *pet.State) string {
-	return fmt.Sprintf("%s looks %s. Food %d, water %d, affection %d out of 100.",
-		pet.PetName, s.Mood(), whole(s.Food), whole(s.Water), whole(s.Affection))
+const drawHeight = 230
+
+func altText(s *pet.State, reaction pet.Action) string {
+	return fmt.Sprintf("%s, a labrador, %s. Looking %s. Food %d, water %d, affection %d out of 100.",
+		pet.PetName, scene(reaction), s.Mood(), whole(s.Food), whole(s.Water), whole(s.Affection))
 }
 
 func statLine(label string, v float64) string {

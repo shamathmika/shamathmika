@@ -26,7 +26,7 @@ func TestNoDashesAnywhereInTheCopy(t *testing.T) {
 	s := pet.New(now)
 	s.Apply(pet.Water, "ana", now)
 
-	copy := append(allLines(), Section(s, now))
+	copy := append(allLines(), Section(s, NoReaction, now))
 	for _, dash := range []string{"—", "–"} {
 		for _, line := range copy {
 			if strings.Contains(line, dash) {

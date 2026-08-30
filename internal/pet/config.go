@@ -11,9 +11,6 @@ const (
 	HistoryPath = "state/history.jsonl"
 	ReadmePath  = "README.md"
 	AssetsDir   = "assets"
-	ArtPath     = "assets/dog.svg"
-	LightSVG    = "pet-light.svg"
-	DarkSVG     = "pet-dark.svg"
 )
 
 const (

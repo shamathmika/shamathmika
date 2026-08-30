@@ -1,6 +1,8 @@
 package render
 
 import (
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 	"time"
@@ -120,12 +122,10 @@ func TestLifetimeLine(t *testing.T) {
 func TestSectionCarriesTheWholePetBlock(t *testing.T) {
 	s := pet.New(now)
 	s.Apply(pet.Water, "ana", now.Add(-3*time.Hour))
-	got := Section(s, now)
+	got := Section(s, NoReaction, now)
 
 	for _, want := range []string{
-		`prefers-color-scheme: dark`,
-		pet.LightSVG,
-		pet.DarkSVG,
+		"assets/happy.jpg",
 		"title=pet%7Cfeed",
 		"title=pet%7Cwater",
 		"title=pet%7Cpet",
@@ -136,6 +136,42 @@ func TestSectionCarriesTheWholePetBlock(t *testing.T) {
 	} {
 		if !strings.Contains(got, want) {
 			t.Errorf("section is missing %q:\n%s", want, got)
+		}
+	}
+}
+
+func TestImageForEveryState(t *testing.T) {
+	cases := []struct {
+		mood     pet.Mood
+		reaction pet.Action
+		want     string
+	}{
+		{pet.Content, pet.Feed, "eating.jpg"},
+		{pet.Wilting, pet.Water, "drinking.jpg"},
+		{pet.Fine, pet.Pet, "petted.jpg"},
+		{pet.Delighted, NoReaction, "happy.jpg"},
+		{pet.Content, NoReaction, "happy.jpg"},
+		{pet.Fine, NoReaction, "waiting.jpg"},
+		{pet.Droopy, NoReaction, "waiting.jpg"},
+		{pet.Wilting, NoReaction, "waiting.jpg"},
+	}
+	for _, c := range cases {
+		if got := imageFor(c.mood, c.reaction); got != c.want {
+			t.Errorf("imageFor(%v, %q) = %q, want %q", c.mood, c.reaction, got, c.want)
+		}
+	}
+}
+
+func TestEveryImageExists(t *testing.T) {
+	seen := map[string]bool{}
+	for _, m := range []pet.Mood{pet.Wilting, pet.Droopy, pet.Fine, pet.Content, pet.Delighted} {
+		for _, r := range []pet.Action{NoReaction, pet.Feed, pet.Water, pet.Pet} {
+			seen[imageFor(m, r)] = true
+		}
+	}
+	for name := range seen {
+		if _, err := os.Stat(filepath.Join("..", "..", pet.AssetsDir, name)); err != nil {
+			t.Errorf("%s is referenced but missing: %v", name, err)
 		}
 	}
 }
