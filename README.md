@@ -25,14 +25,14 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 <p>Say hello to <strong>Jack</strong> while you are here!</p>
 <img src="assets/happy.webp" alt="Jack, a golden retriever, sitting up, tail wagging. Looking delighted. Food 98, water 98, affection 99 out of 100." height="350">
 <p>
-Interact with her by giving her: <br>
-a <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+a+treat.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cfeed">treat</a>
-<br>
-some <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+some+water.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cwater">water</a>
-<br>
-lots of <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+lots+of+pets.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cpet">pets</a>
+Spoil her with 
+<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+a+treat.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cfeed">treats</a>
+/
+<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+some+water.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cwater">water</a>
+/
+<a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+lots+of+pets.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cpet">pets</a>
 </p>
-<p><strong>How she is doing</strong></p>
+<p><strong>Her stats</strong></p>
 <p>
 <code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;&nbsp;98</code><br>
 <code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;&nbsp;98</code><br>

@@ -55,13 +55,15 @@ func Section(s *pet.State, reaction pet.Action, now time.Time) string {
 	fmt.Fprintf(&b, `<img src="%s" alt="%s" height="%d">`+"\n",
 		path.Join(pet.AssetsDir, imageFor(s.Mood(), reaction)), altText(s, reaction), drawHeight)
 
-	b.WriteString(`<p>` + "\n" + `Interact with her by giving her: <br>` + "\n")
-	fmt.Fprintf(&b, `a <a href="%s">treat</a>`+"\n<br>\n", ActionURL(pet.Feed))
-	fmt.Fprintf(&b, `some <a href="%s">water</a>`+"\n<br>\n", ActionURL(pet.Water))
-	fmt.Fprintf(&b, `lots of <a href="%s">pets</a>`+"\n", ActionURL(pet.Pet))
+	b.WriteString(`<p>` + "\n" + `Spoil her with ` + "\n")
+	fmt.Fprintf(&b, `<a href="%s">treats</a>`+"\n", ActionURL(pet.Feed))
+	b.WriteString(`/` + "\n")
+	fmt.Fprintf(&b, `<a href="%s">water</a>`+"\n", ActionURL(pet.Water))
+	b.WriteString(`/` + "\n")
+	fmt.Fprintf(&b, `<a href="%s">pets</a>`+"\n", ActionURL(pet.Pet))
 	b.WriteString(`</p>` + "\n")
 
-	b.WriteString(`<p><strong>How she is doing</strong></p>` + "\n")
+	b.WriteString(`<p><strong>Her stats</strong></p>` + "\n")
 	b.WriteString(`<p>` + "\n")
 	fmt.Fprintf(&b, `<code>%s</code><br>`+"\n", statLine("food", s.Food))
 	fmt.Fprintf(&b, `<code>%s</code><br>`+"\n", statLine("water", s.Water))
