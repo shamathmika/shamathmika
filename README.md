@@ -98,7 +98,7 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+petted%2C+then+replies+here+and+closes+it.+Refresh+the+profile+after+to+see+the+change.&title=pet%7Cpet">pet</a>
 </p>
-<p><sub>last watered by <a href="https://github.com/officialpriyasrinivasan">@officialpriyasrinivasan</a>, 7 minutes ago</sub></p>
+<p><sub>last watered by <a href="https://github.com/officialpriyasrinivasan">@officialpriyasrinivasan</a>, 15 minutes ago</sub></p>
 <p><sub>11 visits from 3 people</sub></p>
 </div>
 <!-- PET:END -->
