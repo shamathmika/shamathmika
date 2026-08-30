@@ -1,6 +1,7 @@
 package render
 
 import (
+	"bytes"
 	"fmt"
 	"html"
 	"math"
@@ -25,7 +26,7 @@ func Section(s *pet.State, now time.Time) string {
 	b.WriteString(`<div align="center">` + "\n")
 	b.WriteString(`<picture>` + "\n")
 	fmt.Fprintf(&b, `<source media="(prefers-color-scheme: dark)" srcset="%s">`+"\n", dark)
-	fmt.Fprintf(&b, `<img src="%s" alt="%s" height="200">`+"\n", light, altText(s))
+	fmt.Fprintf(&b, `<img src="%s" alt="%s" height="%d">`+"\n", light, altText(s), drawHeight)
 	b.WriteString(`</picture>` + "\n")
 
 	b.WriteString(`<p>` + "\n")
@@ -70,10 +71,19 @@ func WriteAssets(s *pet.State, reaction pet.Action, dir string) error {
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		return err
 	}
+	art, err := LoadArt(pet.ArtPath)
+	if err != nil {
+		return err
+	}
 	m := s.Mood()
 	files := map[string]Theme{pet.LightSVG: Light, pet.DarkSVG: Dark}
 	for name, theme := range files {
-		if err := os.WriteFile(filepath.Join(dir, name), []byte(Pet(m, theme, reaction)), 0o644); err != nil {
+		path := filepath.Join(dir, name)
+		next := []byte(Pet(art, m, theme, reaction))
+		if old, err := os.ReadFile(path); err == nil && bytes.Equal(old, next) {
+			continue
+		}
+		if err := os.WriteFile(path, next, 0o644); err != nil {
 			return err
 		}
 	}

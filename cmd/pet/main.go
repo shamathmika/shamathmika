@@ -146,28 +146,32 @@ func preview(dir string) error {
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		return err
 	}
+	art, err := render.LoadArt(pet.ArtPath)
+	if err != nil {
+		return err
+	}
 	for _, m := range moods {
 		for _, t := range []render.Theme{render.Light, render.Dark} {
 			name := fmt.Sprintf("%s-%s.svg", m, t)
-			if err := os.WriteFile(filepath.Join(dir, name), []byte(render.Pet(m, t, render.NoReaction)), 0o644); err != nil {
+			if err := os.WriteFile(filepath.Join(dir, name), []byte(render.Pet(art, m, t, render.NoReaction)), 0o644); err != nil {
 				return err
 			}
 		}
 	}
 	for _, a := range []pet.Action{pet.Feed, pet.Water, pet.Pet} {
 		name := fmt.Sprintf("reaction-%s.svg", a)
-		if err := os.WriteFile(filepath.Join(dir, name), []byte(render.Pet(pet.Content, render.Light, a)), 0o644); err != nil {
+		if err := os.WriteFile(filepath.Join(dir, name), []byte(render.Pet(art, pet.Content, render.Light, a)), 0o644); err != nil {
 			return err
 		}
 	}
-	if err := os.WriteFile(filepath.Join(dir, "faces.html"), []byte(contactSheet()), 0o644); err != nil {
+	if err := os.WriteFile(filepath.Join(dir, "faces.html"), []byte(contactSheet(art)), 0o644); err != nil {
 		return err
 	}
 	fmt.Printf("wrote %s\n", filepath.Join(dir, "faces.html"))
 	return nil
 }
 
-func contactSheet() string {
+func contactSheet(art string) string {
 	var b strings.Builder
 	b.WriteString(`<!doctype html><meta charset="utf-8"><title>pet faces</title>`)
 	b.WriteString(`<style>body{font:14px -apple-system,system-ui,sans-serif;margin:0}` +
@@ -178,13 +182,13 @@ func contactSheet() string {
 	for _, t := range []render.Theme{render.Light, render.Dark} {
 		fmt.Fprintf(&b, `<section class="%s"><h2>%s mode</h2><div class="row">`, t, t)
 		for _, m := range moods {
-			fmt.Fprintf(&b, `<figure>%s<figcaption>%s</figcaption></figure>`, render.Pet(m, t, render.NoReaction), m)
+			fmt.Fprintf(&b, `<figure>%s<figcaption>%s</figcaption></figure>`, render.Pet(art, m, t, render.NoReaction), m)
 		}
 		b.WriteString(`</div></section>`)
 	}
 	b.WriteString(`<section class="light"><h2>reactions<button onclick="location.reload()">replay</button></h2><div class="row">`)
 	for _, a := range []pet.Action{pet.Feed, pet.Water, pet.Pet} {
-		fmt.Fprintf(&b, `<figure>%s<figcaption>%s</figcaption></figure>`, render.Pet(pet.Content, render.Light, a), a)
+		fmt.Fprintf(&b, `<figure>%s<figcaption>%s</figcaption></figure>`, render.Pet(art, pet.Content, render.Light, a), a)
 	}
 	b.WriteString(`</div></section>`)
 	return b.String()
