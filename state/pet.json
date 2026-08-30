@@ -1,14 +1,14 @@
 {
-  "food": 100,
-  "water": 98.75,
-  "affection": 99.99,
-  "lastDecayAt": "2026-08-30T18:58:34Z",
-  "totalActions": 10,
+  "food": 99.96,
+  "water": 100,
+  "affection": 99.95,
+  "lastDecayAt": "2026-08-30T19:02:57Z",
+  "totalActions": 11,
   "bornAt": "2026-08-30T01:49:25Z",
   "lastAction": {
     "user": "officialpriyasrinivasan",
-    "action": "feed",
-    "at": "2026-08-30T18:58:34Z"
+    "action": "water",
+    "at": "2026-08-30T19:02:57Z"
   },
   "helpers": [
     "shamathmika",
