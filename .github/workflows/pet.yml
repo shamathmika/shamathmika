@@ -52,10 +52,12 @@ jobs:
             git push
           fi
 
-      - name: Close the issue
+      - name: Reply and close the issue
         if: github.event_name == 'issues'
         env:
           GH_TOKEN: ${{ github.token }}
           NUMBER: ${{ github.event.issue.number }}
           REPLY: ${{ steps.pet.outputs.reply }}
-        run: gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY" --comment "$REPLY" --reason completed
+        run: |
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body "$REPLY"
+          gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed
