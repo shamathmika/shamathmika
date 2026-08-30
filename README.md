@@ -85,11 +85,11 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 
 <!-- PET:START -->
 <div align="center">
-<img src="assets/happy.png" alt="Jack, a labrador, sitting on the beach. Looking delighted. Food 94, water 94, affection 97 out of 100." height="300">
+<img src="assets/eating.png" alt="Jack, a labrador, taking a treat from a hand. Looking delighted. Food 100, water 91, affection 95 out of 100." height="300">
 <p>
-<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███████████████████░&nbsp;&nbsp;94</code><br>
-<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███████████████████░&nbsp;&nbsp;94</code><br>
-<code>affection&nbsp;███████████████████░&nbsp;&nbsp;97</code>
+<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████&nbsp;100</code><br>
+<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██████████████████░░&nbsp;&nbsp;91</code><br>
+<code>affection&nbsp;███████████████████░&nbsp;&nbsp;95</code>
 </p>
 <p>
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+fed%2C+then+replies+here+and+closes+it.&title=pet%7Cfeed">feed</a>
@@ -98,7 +98,7 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 &nbsp;&nbsp;&middot;&nbsp;&nbsp;
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue.+Jack+gets+petted%2C+then+replies+here+and+closes+it.&title=pet%7Cpet">pet</a>
 </p>
-<p><sub>last petted by <a href="https://github.com/shamathmika">@shamathmika</a>, 5 hours ago</sub></p>
-<p><sub>5 visits from 1 person</sub></p>
+<p><sub>last fed by <a href="https://github.com/aakashbharadwaj15">@aakashbharadwaj15</a>, just now</sub></p>
+<p><sub>6 visits from 2 people</sub></p>
 </div>
 <!-- PET:END -->
