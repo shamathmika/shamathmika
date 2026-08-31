@@ -38,7 +38,7 @@ Spoil her with
 <code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;█████████████████░░░&nbsp;&nbsp;86</code><br>
 <code>affection&nbsp;████████████████████&nbsp;100</code>
 </p>
-<p><sub><a href="https://github.com/cheesken">@cheesken</a> gave her a treat, just now<br>14 visits from 4 people</sub></p>
+<p><sub><a href="https://github.com/cheesken">@cheesken</a> gave her a treat, just now<br>15 visits from 4 people</sub></p>
 </div>
 <!-- PET:END -->
 
