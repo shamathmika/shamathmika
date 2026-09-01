@@ -1,8 +1,8 @@
 {
-  "food": 100,
-  "water": 67.96,
-  "affection": 86.75,
-  "lastDecayAt": "2026-09-01T17:12:01Z",
+  "food": 99.33,
+  "water": 67.18,
+  "affection": 86.16,
+  "lastDecayAt": "2026-09-01T18:19:29Z",
   "totalActions": 16,
   "bornAt": "2026-08-30T01:49:25Z",
   "lastAction": {
