@@ -23,7 +23,7 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 <!-- PET:START -->
 <div align="center">
 <p>Say hello to <strong>Jack</strong> while you are here!</p>
-<img src="assets/happy.webp" alt="Jack, a golden retriever, sitting up, tail wagging. Looking content. Food 79, water 72, affection 72 out of 100." height="350">
+<img src="assets/happy.webp" alt="Jack, a golden retriever, sitting up, tail wagging. Looking content. Food 77, water 71, affection 71 out of 100." height="350">
 <p>
 Spoil her with 
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+a+treat.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cfeed">treats</a>
@@ -34,9 +34,9 @@ Spoil her with
 </p>
 <p><strong>Her stats</strong></p>
 <p>
-<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████░░░░&nbsp;&nbsp;79</code><br>
-<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██████████████░░░░░░&nbsp;&nbsp;72</code><br>
-<code>affection&nbsp;██████████████░░░░░░&nbsp;&nbsp;72</code>
+<code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███████████████░░░░░&nbsp;&nbsp;77</code><br>
+<code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██████████████░░░░░░&nbsp;&nbsp;71</code><br>
+<code>affection&nbsp;██████████████░░░░░░&nbsp;&nbsp;71</code>
 </p>
 <p><sub><a href="https://github.com/officialsrinivasanb">@officialsrinivasanb</a> gave her some water, yesterday<br>20 visits from 6 people</sub></p>
 </div>
