@@ -23,7 +23,7 @@ On campus I worked as a <strong>Teaching Assistant</strong> for Software System 
 <!-- PET:START -->
 <div align="center">
 <p>Say hello to <strong>Jack</strong> while you are here!</p>
-<img src="assets/eating.webp" alt="Jack, a golden retriever, taking a treat from a hand. Looking fine. Food 76, water 36, affection 45 out of 100." height="350">
+<img src="assets/petted.webp" alt="Jack, a golden retriever, being scratched on the head. Looking fine. Food 76, water 36, affection 80 out of 100." height="350">
 <p>
 Spoil her with 
 <a href="https://github.com/shamathmika/shamathmika/issues/new?body=Submit+this+issue+and+Jack+gets+a+treat.+She+replies+here+and+closes+it+herself.+Then+head+back+to+%5Bthe+profile%5D%28https%3A%2F%2Fgithub.com%2Fshamathmika%29+and+refresh+to+see+her+reaction.&title=pet%7Cfeed">treats</a>
@@ -36,9 +36,9 @@ Spoil her with
 <p>
 <code>food&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███████████████░░░░░&nbsp;&nbsp;76</code><br>
 <code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███████░░░░░░░░░░░░░&nbsp;&nbsp;36</code><br>
-<code>affection&nbsp;█████████░░░░░░░░░░░&nbsp;&nbsp;45</code>
+<code>affection&nbsp;████████████████░░░░&nbsp;&nbsp;80</code>
 </p>
-<p><sub><a href="https://github.com/ajaybharadwaj3900-cpu">@ajaybharadwaj3900-cpu</a> gave her a treat, just now<br>27 visits from 7 people</sub></p>
+<p><sub><a href="https://github.com/ajaybharadwaj3900-cpu">@ajaybharadwaj3900-cpu</a> gave her lots of pets, just now<br>28 visits from 7 people</sub></p>
 </div>
 <!-- PET:END -->
 
