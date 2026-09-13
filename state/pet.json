@@ -1,14 +1,14 @@
 {
-  "food": 75.89,
-  "water": 36.09,
-  "affection": 79.52,
-  "lastDecayAt": "2026-09-13T14:40:51Z",
-  "totalActions": 28,
+  "food": 75.85,
+  "water": 71.04,
+  "affection": 79.48,
+  "lastDecayAt": "2026-09-13T14:45:00Z",
+  "totalActions": 29,
   "bornAt": "2026-08-30T01:49:25Z",
   "lastAction": {
     "user": "ajaybharadwaj3900-cpu",
-    "action": "pet",
-    "at": "2026-09-13T14:40:51Z"
+    "action": "water",
+    "at": "2026-09-13T14:45:00Z"
   },
   "helpers": [
     "shamathmika",
