@@ -38,7 +38,7 @@ Spoil her with
 <code>water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;░░░░░░░░░░░░░░░░░░░░&nbsp;&nbsp;&nbsp;0</code><br>
 <code>affection&nbsp;░░░░░░░░░░░░░░░░░░░░&nbsp;&nbsp;&nbsp;0</code>
 </p>
-<p><sub><a href="https://github.com/officialpriyasrinivasan">@officialpriyasrinivasan</a> gave her lots of pets, 7 days ago<br>32 visits from 7 people</sub></p>
+<p><sub><a href="https://github.com/officialpriyasrinivasan">@officialpriyasrinivasan</a> gave her lots of pets, 8 days ago<br>32 visits from 7 people</sub></p>
 </div>
 <!-- PET:END -->
 
