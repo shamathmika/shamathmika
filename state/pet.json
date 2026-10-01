@@ -1,14 +1,14 @@
 {
-  "food": 0,
+  "food": 35,
   "water": 0,
-  "affection": 35,
-  "lastDecayAt": "2026-09-30T23:33:09Z",
-  "totalActions": 33,
+  "affection": 34.71,
+  "lastDecayAt": "2026-10-01T00:06:20Z",
+  "totalActions": 34,
   "bornAt": "2026-08-30T01:49:25Z",
   "lastAction": {
     "user": "cheesken",
-    "action": "pet",
-    "at": "2026-09-30T23:33:09Z"
+    "action": "feed",
+    "at": "2026-10-01T00:06:20Z"
   },
   "helpers": [
     "shamathmika",
